@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import TheTop from "./Components/TheTop";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <TheTop />
+      <main class="homeMain">
+      </main>
+
+      <article>
+        <h1>Hello welcome</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+
+          Structures, Finishing and Frames: All the Ways to Use Timber in a Work
+          One of the first elements used by humans to build shelters, wood is a versatile material that, along with technological advances, remains a protagonist in the construction industry, being used in different ways and moments in a work.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </article>
+
     </div>
   );
 }
 
-export default App;

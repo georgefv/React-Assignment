@@ -5,9 +5,256 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* General Styling across the page */
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+a:visited {
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+
+a:active {
+  text-decoration: none;
+}
+
+
+
+/* Styling the header */
+/* The drop shadow code was RnD-ed = Robbed and Duplicated */
+
+#root>div>header {
+  background-color: white;
+  z-index: 2;
+}
+
+#root>div>header>nav {
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
+  box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, .25);
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+/* Modern Architecture */
+
+#websiteName {
+  font-size: 18px;
+}
+
+#hamItems {
+  align-self: center;
+}
+
+/* Garnishing the mobile view nav bar */
+
+#hamItems {
+  display: none;
+}
+
+#hamnav {
+  flex-direction: column;
+}
+
+#hamItemsMobile {
+  font-size: 14px;
+  align-self: flex-start;
+  padding-bottom: 10px;
+}
+
+/* Background Images */
+
+.homeMain,
+.projectMain,
+.aboutMain,
+.contactMain {
+  z-index: -2;
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url('../public/assets/bg_pic.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.aboutMain {
+  background-image: url('../public/assets/rom.jpg');
+}
+
+.projectMain {
+  background-image: url('../public/assets/milan.jpg');
+
+}
+
+.contactMain {
+  background-image: url('../public/assets/singapourr.jpg');
+  height: 120%;
+}
+
+
+/* Styling Text Bodies */
+
+article {
+  z-index: 1;
+  padding-top: 30px;
+  font-size: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+article h1 {
+  text-decoration: underline;
+}
+
+
+/* -------------------------Desktop View---------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 992px) {
+
+  /* header font fixing */
+
+  #root>div>header>nav>div {
+    font-size: 20px;
+
+  }
+
+  #websiteName {
+    font-size: 20px;
+  }
+
+  /* hiding the mobile view from Amanda and showing the text */
+
+  #hamnav {
+    flex-direction: row;
+  }
+
+  #hamItemsMobile {
+    display: none;
+  }
+
+  #hamItems {
+    display: unset;
+  }
+
+
+
+}
+
+
+/* Contact form styling */
+
+.form {
+  width: 340px;
+  height: 440px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(10vh) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  position: relative
+}
+
+form h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  transition: all .3s;
+  border-bottom: 2px solid #bebed2
+}
+
+input:focus {
+  border-bottom: 2px solid #78788c
+}
+
+form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a
+}
+
+button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all .3s
+}
+
+button:hover {
+  background: #78788c;
+  color: #fff
+}
+
+form div {
+  content: 'Hi';
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+  background: #50505a;
+  color: #fff;
+  width: 320px;
+  padding: 16px 4px 16px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000
+}
+
+form span {
+  margin: 0 5px 0 15px
 }
